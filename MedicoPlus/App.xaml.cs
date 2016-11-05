@@ -21,6 +21,12 @@ namespace MedicoPlus
                 FirstStart fs= new FirstStart();
                 fs.Show();
             }
+            else
+            {
+                Bootstrapper bootstrapper = new Bootstrapper();
+                bootstrapper.Run();
+            }
+
         }
     }
 }

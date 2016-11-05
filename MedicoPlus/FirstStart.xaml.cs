@@ -91,7 +91,7 @@ namespace MedicoPlus
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(fout, obj);
             fout.Close();
-
+            this.Close();
             //FileStream fin = File.OpenRead(path);
 
             //BinaryFormatter bf = new BinaryFormatter();

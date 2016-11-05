@@ -1,0 +1,24 @@
+﻿<Window x:Class="MedicoPlus.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MedicoPlus"
+        xmlns:regions="http://prismlibrary.com/"
+        mc:Ignorable="d"
+        Title="MedicoPlus">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+        <ItemsControl Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" regions:RegionManager.RegionName="MainContent"/>
+        <ItemsControl  Grid.Row="1" Grid.Column="0" regions:RegionManager.RegionName="LeftContent"/>
+        <ItemsControl  Grid.Row="1" Grid.Column="1" regions:RegionManager.RegionName="RightContent"/>
+    </Grid>
+</Window>
+
