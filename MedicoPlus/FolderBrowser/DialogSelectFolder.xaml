@@ -1,0 +1,16 @@
+﻿<Window x:Class="MedicoPlus.FolderBrowser.DialogSelectFolder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MedicoPlus.FolderBrowser"
+        mc:Ignorable="d"
+        Title="DialogSelectFolder" Height="300" Width="300" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" BorderBrush="Black">
+    <Grid>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock1" Text="Обраний каталог" VerticalAlignment="Top" Width="187" />
+        <Button Content="Вгору" Height="23" HorizontalAlignment="Right" Margin="0,12,12,0" Name="button1" VerticalAlignment="Top" Width="61" Click="button1_Click" />
+        <ListBox Height="164" HorizontalAlignment="Left" Margin="12,41,0,0" Name="listBox1" VerticalAlignment="Top" Width="254" MouseDoubleClick="mouseDoubleClickOnListBox" SelectionChanged="currentSelect" />
+        <Button Content="Відміна" Height="23" HorizontalAlignment="Right" Margin="0,226,12,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
+        <Button Content="Обрати" Height="23" HorizontalAlignment="Left" Margin="110,226,0,0" Name="button3" VerticalAlignment="Top" Width="75" Click="button3_Click" />
+    </Grid>
+</Window>
