@@ -14,7 +14,7 @@
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
         <StackPanel  Grid.Row="0" Grid.Column="0">
-            <Button Width="150" Height="150" x:Name="lobby">
+            <Button Width="150" Height="150" x:Name="lobby" Click="lobby_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/MedicoPlus;component/Images/lobby_256.png" TileMode="Tile" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -22,7 +22,7 @@
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Приймальне відділення" FontSize="12"/>
         </StackPanel>
         <StackPanel  Grid.Row="0" Grid.Column="1" >
-            <Button Width="150" Height="150" x:Name="setup">
+            <Button Width="150" Height="150" x:Name="setup" Click="setup_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/MedicoPlus;component/Images/Setup.png" TileMode="Tile" Stretch="UniformToFill"/>
                 </Button.Background>

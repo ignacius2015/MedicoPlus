@@ -24,5 +24,15 @@ namespace MedicoPlus.Views
         {
             InitializeComponent();
         }
+
+        private void lobby_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void setup_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
