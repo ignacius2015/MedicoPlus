@@ -36,6 +36,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
@@ -52,6 +60,14 @@
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Prism, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.6.2.0\lib\net45\Prism.dll</HintPath>
       <Private>True</Private>
@@ -65,7 +81,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Wpf.6.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
@@ -89,8 +108,29 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Helpers\PasswordBoxAssistant.cs" />
+    <Compile Include="Models\areas.cs" />
+    <Compile Include="Models\cities.cs" />
+    <Compile Include="Models\departaments.cs" />
+    <Compile Include="Models\documents.cs" />
+    <Compile Include="Models\hospitals.cs" />
+    <Compile Include="Models\mkh.cs" />
+    <Compile Include="Models\MySQL.cs" />
+    <Compile Include="Models\online.cs" />
+    <Compile Include="Models\patients.cs" />
+    <Compile Include="Models\personal.cs" />
+    <Compile Include="Models\regions.cs" />
+    <Compile Include="Models\users.cs" />
+    <Compile Include="Modules\TopViewModule.cs" />
+    <Compile Include="Presenters\TopViewPresenter.cs" />
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TopView.xaml.cs">
+      <DependentUpon>TopView.xaml</DependentUpon>
     </Compile>
     <Page Include="FirstStart.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -109,6 +149,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Shell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TopView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,6 +192,98 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\allergy_vials_256.png" />
+    <Resource Include="Images\ambulance_256.png" />
+    <Resource Include="Images\antibiotic_256.png" />
+    <Resource Include="Images\antidepressant_256.png" />
+    <Resource Include="Images\antiparasitic_256.png" />
+    <Resource Include="Images\Application.png" />
+    <Resource Include="Images\appointment_256.png" />
+    <Resource Include="Images\appointment_scheduler_256.png" />
+    <Resource Include="Images\bur_256.png" />
+    <Resource Include="Images\Calibration.png" />
+    <Resource Include="Images\cardiology_256.png" />
+    <Resource Include="Images\chief_of_staff_256.png" />
+    <Resource Include="Images\ChronologicalReview.png" />
+    <Resource Include="Images\cuspidor_256.png" />
+    <Resource Include="Images\deceased_256.png" />
+    <Resource Include="Images\DefineControls.png" />
+    <Resource Include="Images\dermatology_256.png" />
+    <Resource Include="Images\diagnostic_256.png" />
+    <Resource Include="Images\doctor_256.png" />
+    <Resource Include="Images\dropper_256.png" />
+    <Resource Include="Images\emergency_256.png" />
+    <Resource Include="Images\eye_chart_256.png" />
+    <Resource Include="Images\first_aid_kit_256.png" />
+    <Resource Include="Images\forceps_256.png" />
+    <Resource Include="Images\fracture_256.png" />
+    <Resource Include="Images\general_surgery_256.png" />
+    <Resource Include="Images\geriatrics_256.png" />
+    <Resource Include="Images\gynecology_256.png" />
+    <Resource Include="Images\hematology_256.png" />
+    <Resource Include="Images\hospitalization_256.png" />
+    <Resource Include="Images\hospital_256.png" />
+    <Resource Include="Images\hospital_bed_256.png" />
+    <Resource Include="Images\implant_256.png" />
+    <Resource Include="Images\infirmary_256.png" />
+    <Resource Include="Images\inhaler_256.png" />
+    <Resource Include="Images\insurance_billing_256.png" />
+    <Resource Include="Images\internal_medicine_256.png" />
+    <Resource Include="Images\laboratory_256.png" />
+    <Resource Include="Images\lobby_256.png" />
+    <Resource Include="Images\Maintenance.png" />
+    <Resource Include="Images\Measurement.png" />
+    <Resource Include="Images\medical_bag_256.png" />
+    <Resource Include="Images\medical_history_256.png" />
+    <Resource Include="Images\microscope_256.png" />
+    <Resource Include="Images\neurology_256.png" />
+    <Resource Include="Images\nurse_256.png" />
+    <Resource Include="Images\obstetrics_256.png" />
+    <Resource Include="Images\occupational_therapy_256.png" />
+    <Resource Include="Images\odontology_256.png" />
+    <Resource Include="Images\oncology_256.png" />
+    <Resource Include="Images\OnOffSwitch.png" />
+    <Resource Include="Images\operating_room_256.png" />
+    <Resource Include="Images\ophthalmology_256.png" />
+    <Resource Include="Images\optometrist_256.png" />
+    <Resource Include="Images\oxygen_256.png" />
+    <Resource Include="Images\paediatrics_256.png" />
+    <Resource Include="Images\ParameterReview.png" />
+    <Resource Include="Images\pathology_256.png" />
+    <Resource Include="Images\PatientData.png" />
+    <Resource Include="Images\PatientFile.png" />
+    <Resource Include="Images\patients_room_256.png" />
+    <Resource Include="Images\patient_256.png" />
+    <Resource Include="Images\pharmacy_256.png" />
+    <Resource Include="Images\pills_256.png" />
+    <Resource Include="Images\plaster_256.png" />
+    <Resource Include="Images\pliers_256.png" />
+    <Resource Include="Images\pregnant_woman_256.png" />
+    <Resource Include="Images\prescription_256.png" />
+    <Resource Include="Images\progress_notes_256.png" />
+    <Resource Include="Images\psychiatry_256.png" />
+    <Resource Include="Images\QualityControl.png" />
+    <Resource Include="Images\radiology_256.png" />
+    <Resource Include="Images\reminders_and_recalls_256.png" />
+    <Resource Include="Images\RunControl.png" />
+    <Resource Include="Images\safety_glasses_256.png" />
+    <Resource Include="Images\scanner_256.png" />
+    <Resource Include="Images\Setup.png" />
+    <Resource Include="Images\stethoscope_256.png" />
+    <Resource Include="Images\surgeon_256.png" />
+    <Resource Include="Images\syringe_256.png" />
+    <Resource Include="Images\tablet_256.png" />
+    <Resource Include="Images\toddler_256.png" />
+    <Resource Include="Images\track_medications_256.png" />
+    <Resource Include="Images\treatment_256.png" />
+    <Resource Include="Images\urology_256.png" />
+    <Resource Include="Images\ViewResults.png" />
+    <Resource Include="Images\waiting_room_256.png" />
+    <Resource Include="Images\walking_stick_256.png" />
+    <Resource Include="Images\wheelchair_256.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

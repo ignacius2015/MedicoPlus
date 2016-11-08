@@ -7,20 +7,24 @@
         mc:Ignorable="d"
         Title="МедікоПлюс. Налаштування програми" Width="475" Height="344" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" BorderBrush="Black">
     <Grid x:Name="LayoutRoot">
-        <TextBox x:Name="FormFolder" Margin="27,51,222.447,0" TextWrapping="NoWrap" VerticalAlignment="Top" Height="27.96"/>
-        <Label Content="Налаштування програми" Height="29" Margin="71,8,110,0" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="16" FontFamily="Segoe UI Symbol" FontWeight="Bold"/>
-        <Button x:Name="buttonFolder" Content="..." HorizontalAlignment="Right" Height="27.96" Margin="0,51,184.6,0" VerticalAlignment="Top" Width="33.847" Click="buttonFolder_Click"/>
-        <Label Content="Директорія збереження&#xd;&#xa; форм користувача" HorizontalAlignment="Right" Height="48.96" Margin="0,41,37,0" VerticalAlignment="Top" Width="142.447"/>
-        <TextBox x:Name="DocsFolder" Height="28" Margin="27,101,222.447,0" TextWrapping="NoWrap" VerticalAlignment="Top"/>
-        <Button x:Name="buttonDocs" Content="..." HorizontalAlignment="Right" Height="28" Margin="0,101,184.6,0" VerticalAlignment="Top" Width="33.847" Click="buttonDocs_Click"/>
-        <Label Content="Директорія збереження&#xa; документів користувача" HorizontalAlignment="Right" Height="44" Margin="0,93,21,0" VerticalAlignment="Top" Width="158.447"/>
-        <ComboBox x:Name="databasesList" Height="24" Margin="27,146,222.447,0" VerticalAlignment="Top" SelectionChanged="databasesList_SelectionChanged" />
-        <Label Content="Оберіть базу даних" HorizontalAlignment="Right" Height="30" Margin="0,146,52.447,0" VerticalAlignment="Top" Width="127"/>
-        <TextBox x:Name="databaseName" Margin="27,192,184.6,0" TextWrapping="NoWrap" Height="25" VerticalAlignment="Top"/>
-        <Label Content="Введіть ім'я бази даних" HorizontalAlignment="Right" Height="25" Margin="0,190,37,0" VerticalAlignment="Top" Width="142.447"/>
-        <Label Content="Шлях до каталога шаблонів" HorizontalAlignment="Right" Height="26" Margin="0,0,8,51" VerticalAlignment="Bottom" Width="171.447"/>
-        <TextBox x:Name="TemplatePath" Height="25" Margin="27,0,222.447,50" TextWrapping="NoWrap" VerticalAlignment="Bottom"/>
-        <Button x:Name="TemplateChoice" Content="..." HorizontalAlignment="Right" Height="27" Margin="0,0,184.6,48" VerticalAlignment="Bottom" Width="33.847" Click="TemplateChoice_Click"/>
-        <Button x:Name="Save" Content="Зберегти" Height="28" Margin="8,0,0,8" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="81.526" Click="Save_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="366*"/>
+            <ColumnDefinition Width="101*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="FormFolder" Margin="27,51,121,0" TextWrapping="NoWrap" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Налаштування програми" Height="29" Margin="110,8,48,0" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="16" FontFamily="Segoe UI Symbol" FontWeight="Bold"/>
+        <Button x:Name="buttonFolder" Content="..." HorizontalAlignment="Right" Height="28" Margin="0,51,84,0" VerticalAlignment="Top" Width="33" Click="buttonFolder_Click"/>
+        <Label Content="Директорія збереження&#xd;&#xa; форм користувача" HorizontalAlignment="Right" Height="49" Margin="0,41,37,0" VerticalAlignment="Top" Width="142" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="DocsFolder" Height="28" Margin="27,101,121,0" TextWrapping="NoWrap" VerticalAlignment="Top"/>
+        <Button x:Name="buttonDocs" Content="..." HorizontalAlignment="Right" Height="28" Margin="0,101,84,0" VerticalAlignment="Top" Width="33" Click="buttonDocs_Click"/>
+        <Label Content="Директорія збереження&#xa; документів користувача" HorizontalAlignment="Right" Height="44" Margin="0,93,21,0" VerticalAlignment="Top" Width="158" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="databasesList" Height="24" Margin="27,146,121,0" VerticalAlignment="Top" SelectionChanged="databasesList_SelectionChanged" />
+        <Label Content="Оберіть базу даних" HorizontalAlignment="Right" Height="30" Margin="0,146,52,0" VerticalAlignment="Top" Width="127" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="databaseName" Margin="27,192,83,0" TextWrapping="NoWrap" Height="25" VerticalAlignment="Top"/>
+        <Label Content="Введіть ім'я бази даних" HorizontalAlignment="Right" Height="25" Margin="0,190,37,0" VerticalAlignment="Top" Width="142" Grid.ColumnSpan="2"/>
+        <Label Content="Шлях до каталога шаблонів" HorizontalAlignment="Right" Height="26" Margin="0,0,8,51" VerticalAlignment="Bottom" Width="171" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TemplatePath" Height="25" Margin="27,0,121,50" TextWrapping="NoWrap" VerticalAlignment="Bottom"/>
+        <Button x:Name="TemplateChoice" Content="..." HorizontalAlignment="Right" Height="27" Margin="0,0,84,48" VerticalAlignment="Bottom" Width="33" Click="TemplateChoice_Click"/>
+        <Button x:Name="Save" Content="Зберегти" Height="28" Margin="197,0,88,8" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="81" Click="Save_Click"/>
     </Grid>
 </Window>

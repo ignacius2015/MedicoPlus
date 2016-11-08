@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using MedicoPlus.Views;
 
 namespace MedicoPlus
 {
@@ -23,8 +24,8 @@ namespace MedicoPlus
             }
             else
             {
-                Bootstrapper bootstrapper = new Bootstrapper();
-                bootstrapper.Run();
+                Login login=new Login();
+                login.Show();
             }
 
         }

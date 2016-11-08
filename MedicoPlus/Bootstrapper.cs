@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using MedicoPlus.Views;
 using Prism.Modularity;
 using Prism.Unity;
 
@@ -22,7 +23,7 @@ namespace MedicoPlus
         protected override IModuleCatalog CreateModuleCatalog()
         {
             ModuleCatalog catalog = new ModuleCatalog();
-           // catalog.AddModule(typeof(UserView.DocsViewModule));
+            catalog.AddModule(typeof(TopView));
            // catalog.AddModule(typeof(Form001.Views.Form001));
             return catalog;
         }
