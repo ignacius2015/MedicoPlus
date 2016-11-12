@@ -32,15 +32,19 @@ namespace MedicoPlus.Views
             var users = db.users;
             try
             {
-                if (login.Text.Equals(u.login) && password.Password.Equals(u.password))
+                foreach (users u in users)
                 {
 
-                    Bootstrapper bootstrapper = new Bootstrapper();
-                    bootstrapper.Run();
-                }
-                else
-                {
-                    MessageBox.Show("Користувача не знайдено.");
+                    if (login.Text.Equals(u.login) && password.Password.Equals(u.password))
+                    {
+
+                        Bootstrapper bootstrapper = new Bootstrapper();
+                        bootstrapper.Run();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Користувача не знайдено.");
+                    }
                 }
             }
 
