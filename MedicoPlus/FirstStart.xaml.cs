@@ -18,7 +18,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace MedicoPlus
 {
-    
+    [Serializable]
     struct sett
     {
         public string docs;
@@ -69,10 +69,10 @@ namespace MedicoPlus
             FormFolder.Text=csPathToFolder.PathOfSelectedFolder;
             SelectFolder.Close();
         }
-
+        string database;
         private void databasesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // TODO: Add event handler implementation here.
+            database = (sender as ComboBox).SelectedItem as string;
         }
 
         private void TemplateChoice_Click(object sender, RoutedEventArgs e)

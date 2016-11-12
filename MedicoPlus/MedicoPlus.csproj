@@ -108,12 +108,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Helpers\PasswordBoxAssistant.cs" />
     <Compile Include="Models\areas.cs" />
     <Compile Include="Models\cities.cs" />
     <Compile Include="Models\departaments.cs" />
+    <Compile Include="Models\Document.cs" />
+    <Compile Include="Models\DocumentRepository.cs" />
     <Compile Include="Models\documents.cs" />
     <Compile Include="Models\hospitals.cs" />
+    <Compile Include="Models\IDocumentRepository.cs" />
     <Compile Include="Models\mkh.cs" />
     <Compile Include="Models\MySQL.cs" />
     <Compile Include="Models\online.cs" />
@@ -129,8 +131,8 @@
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\TopView.xaml.cs">
-      <DependentUpon>TopView.xaml</DependentUpon>
+    <Compile Include="Views\AdminView.xaml.cs">
+      <DependentUpon>AdminView.xaml</DependentUpon>
     </Compile>
     <Page Include="FirstStart.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -156,7 +158,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\TopView.xaml">
+    <Page Include="Views\AdminView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -283,7 +285,14 @@
     <Resource Include="Images\walking_stick_256.png" />
     <Resource Include="Images\wheelchair_256.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Docs\" />
+    <Folder Include="Forms\" />
+    <Folder Include="Templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Helpers\1.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

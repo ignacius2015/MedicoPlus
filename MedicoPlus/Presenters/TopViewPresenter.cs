@@ -12,13 +12,13 @@ namespace MedicoPlus.Presenters
     {
         private readonly IEventAggregator _eventAggregator;
 
-        public TopViewPresenter(TopView view, IEventAggregator eventAggregator)
+        public TopViewPresenter(AdminView view, IEventAggregator eventAggregator)
         {
             View = view;
             _eventAggregator = eventAggregator;
             
         }
-        public TopView View { get; }
+        public AdminView View { get; }
        
     }
 }

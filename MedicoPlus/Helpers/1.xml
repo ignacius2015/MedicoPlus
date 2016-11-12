@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<document>
+  <Name>Приймальне відділення</Name>
+  <ImageName>lobby_256.png</ImageName>
+  <ModuleName>Lobby</ModuleName>
+  <Name>Адміністрування</Name>
+  <ImageName>Setup.png</ImageName>
+  <ModuleName>Setup</ModuleName>
+</document>

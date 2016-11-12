@@ -24,7 +24,7 @@ namespace MedicoPlus.Modules
         public void Initialize()
         {
            // _container.RegisterType(typeof(IDocumentRepository), typeof(DocumentRepository));
-            _manager.AddToRegion("MainContent", _container.Resolve<TopView>());
+            _manager.AddToRegion("MainContent", _container.Resolve<AdminView>());
         }
     }
 }

@@ -18,9 +18,9 @@ namespace MedicoPlus.Views
     /// <summary>
     /// Interaction logic for TopView.xaml
     /// </summary>
-    public partial class TopView : UserControl
+    public partial class AdminView : UserControl
     {
-        public TopView()
+        public AdminView()
         {
             InitializeComponent();
         }
