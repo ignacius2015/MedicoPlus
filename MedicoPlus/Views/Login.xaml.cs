@@ -20,6 +20,7 @@ namespace MedicoPlus.Views
     /// </summary>
     public partial class Login : Window
     {
+        private int userAccess;
         public Login()
         {
             InitializeComponent();
@@ -31,23 +32,16 @@ namespace MedicoPlus.Views
             var users = db.users;
             try
             {
-                foreach(users user in users)
+                if (login.Text.Equals(u.login) && password.Password.Equals(u.password))
                 {
-                    if(login.Text.Equals(user.login) && password.Password.Equals(user.password))
-                    {
 
-                        Bootstrapper bootstrapper = new Bootstrapper();
-                        bootstrapper.Run();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Користувача не знайдено.");
-                    }
+                    Bootstrapper bootstrapper = new Bootstrapper();
+                    bootstrapper.Run();
                 }
-            }
-            catch(Exception ex)
-            {
-
+                else
+                {
+                    MessageBox.Show("Користувача не знайдено.");
+                }
             }
 
 
