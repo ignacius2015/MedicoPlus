@@ -6,5 +6,11 @@
   <Name>Адміністрування</Name>
   <ImageName>Setup.png</ImageName>
   <ModuleName>Setup</ModuleName>
-  <count>2</count>
+  <Name>Головна сторінка</Name>
+  <ImageName>tablet_256.png</ImageName>
+  <ModuleName>Desktop</ModuleName>
+   <Name>Нормативно-довідкова інформація</Name>
+  <ImageName>progress_notes_256.png</ImageName>
+  <ModuleName>Helpers</ModuleName>
+  <count>4</count>
 </document>
