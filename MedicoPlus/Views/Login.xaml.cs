@@ -20,7 +20,6 @@ namespace MedicoPlus.Views
     /// </summary>
     public partial class Login : Window
     {
-        private int userAccess;
         public Login()
         {
             InitializeComponent();
@@ -29,19 +28,26 @@ namespace MedicoPlus.Views
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
             MySQL db= new MySQL();
-            var Users = db.users;
-            foreach (users u in Users)
+            var users = db.users;
+            try
             {
-                if (login.Text.Equals(u.login) && password.Password.Equals(u.password))
+                foreach(users user in users)
                 {
-                    //userAccess = u.rules;
-                    Bootstrapper bootstrapper = new Bootstrapper();
-                    bootstrapper.Run();
+                    if(login.Text.Equals(user.login) && password.Password.Equals(user.password))
+                    {
+
+                        Bootstrapper bootstrapper = new Bootstrapper();
+                        bootstrapper.Run();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Користувача не знайдено.");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Користувача не знайдено.");
-                }
+            }
+            catch(Exception ex)
+            {
+
             }
 
 
