@@ -20,7 +20,7 @@ namespace MedicoPlus.Views
     /// </summary>
     public partial class Login : Window
     {
-        private int userAccess;
+        public static string userAccess;
         public Login()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace MedicoPlus.Views
 
                     if (login.Text.Equals(u.login) && password.Password.Equals(u.password))
                     {
-
+                        //userAccess = u.rules; пока закрыто, данные в другой базе
                         Bootstrapper bootstrapper = new Bootstrapper();
                         bootstrapper.Run();
                     }
@@ -47,6 +47,8 @@ namespace MedicoPlus.Views
                     }
                 }
             }
+            finally
+            { }
 
 
         }

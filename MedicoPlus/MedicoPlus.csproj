@@ -108,6 +108,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Helpers\SelectedDocumentEvent.cs" />
     <Compile Include="Models\areas.cs" />
     <Compile Include="Models\cities.cs" />
     <Compile Include="Models\departaments.cs" />
@@ -131,8 +132,8 @@
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminView.xaml.cs">
-      <DependentUpon>AdminView.xaml</DependentUpon>
+    <Compile Include="Views\TopView.xaml.cs">
+      <DependentUpon>TopView.xaml</DependentUpon>
     </Compile>
     <Page Include="FirstStart.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -158,7 +159,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AdminView.xaml">
+    <Page Include="Views\TopView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -291,7 +292,7 @@
     <Folder Include="Templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Helpers\1.xml" />
+    <Resource Include="Helpers\view.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

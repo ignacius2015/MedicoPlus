@@ -12,19 +12,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MedicoPlus.Presenters;
 
 namespace MedicoPlus.Views
 {
     /// <summary>
     /// Interaction logic for TopView.xaml
     /// </summary>
-    public partial class AdminView : UserControl
+    public partial class TopView : UserControl
     {
-        public AdminView()
+        public string name = Login.userAccess;
+        public TopView()
         {
             InitializeComponent();
         }
 
+        public TopViewPresenter Model
+        {
+            get { return DataContext as TopViewPresenter; }
+            set { DataContext = value; }
+        }
         private void lobby_Click(object sender, RoutedEventArgs e)
         {
 

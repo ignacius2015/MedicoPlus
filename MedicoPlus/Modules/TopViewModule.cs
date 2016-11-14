@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MedicoPlus.Models;
 using MedicoPlus.Presenters;
 using MedicoPlus.Views;
 using Microsoft.Practices.Unity;
@@ -23,8 +24,8 @@ namespace MedicoPlus.Modules
         }
         public void Initialize()
         {
-           // _container.RegisterType(typeof(IDocumentRepository), typeof(DocumentRepository));
-            _manager.AddToRegion("MainContent", _container.Resolve<AdminView>());
+            _container.RegisterType(typeof(IDocumentRepository), typeof(DocumentRepository));
+            _manager.AddToRegion("MainContent", _container.Resolve<TopViewPresenter>().View);
         }
     }
 }

@@ -23,7 +23,7 @@ namespace MedicoPlus
         protected override IModuleCatalog CreateModuleCatalog()
         {
             ModuleCatalog catalog = new ModuleCatalog();
-            catalog.AddModule(typeof(AdminView));
+            catalog.AddModule(typeof(TopView));
            // catalog.AddModule(typeof(Form001.Views.Form001));
             return catalog;
         }
