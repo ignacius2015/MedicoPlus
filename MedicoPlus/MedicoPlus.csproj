@@ -109,7 +109,6 @@
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Helpers\SelectedDocumentEvent.cs" />
-    <Compile Include="Helpers\Variables.cs" />
     <Compile Include="Models\areas.cs" />
     <Compile Include="Models\cities.cs" />
     <Compile Include="Models\departaments.cs" />

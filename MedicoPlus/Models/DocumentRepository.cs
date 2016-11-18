@@ -20,7 +20,7 @@ namespace MedicoPlus.Models
         {
             Document doc= new Document();
             XmlDocument xDoc = new XmlDocument();
-            // xDoc.Load(name+".xml");
+            // xDoc.Load("Helpers\\"+name+".xml");
             xDoc.Load("Helpers\\admin.xml");
             // получим корневой элемент
             XmlElement xRoot = xDoc.DocumentElement;
@@ -34,7 +34,6 @@ namespace MedicoPlus.Models
                         XmlNode attr = xnode.Attributes.GetNamedItem("Name");
                         if (attr != null)
                         {
-                            //var TextBlock=new TextBlock();
                             doc.LinkName = attr.Value;
                         }
                     }
@@ -43,19 +42,12 @@ namespace MedicoPlus.Models
                         // если узел - ImageName
                         if (childnode.Name == "ImageName")
                         {
-                            //var button= new Button();
-                            //var ImageBrush = new ImageBrush
-                            //{
-                            //    ImageSource = new BitmapImage(new Uri(childnode.InnerText, UriKind.Relative))
-                            //};
-                            //button.Background = ImageBrush;
                             doc.ImageName = childnode.InnerText;
                         }
                         
                     }
                     if (xnode.Name == "count")
                     {
-                        //Variables.countbuttons = Convert.ToInt32(childnode.InnerText);
                         doc.count = Convert.ToInt32(xnode.InnerText);
                     }
                     document.Add(doc);
