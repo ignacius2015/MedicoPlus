@@ -26,6 +26,7 @@ namespace MedicoPlus
             {
                 Login login=new Login();
                 login.Show();
+                //login.Close();
             }
 
         }

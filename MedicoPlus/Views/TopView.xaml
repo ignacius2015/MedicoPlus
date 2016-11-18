@@ -4,20 +4,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MedicoPlus.Views"
+             xmlns:help="clr-namespace:MedicoPlus.Helpers"
              mc:Ignorable="d">
-    <UserControl.Resources>
-        <XmlDataProvider x:Key="Provider" Source="../Helpers/view.xml" XPath="documents"/>
-    </UserControl.Resources>
-        
+    
     <Grid>
-        <StackPanel Orientation="Horizontal">
-            <Button Width="150" Height="150" x:Name="lobby" Click="lobby_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="{Binding XPath=ImageName}" TileMode="Tile" Stretch="UniformToFill"/>
-                </Button.Background>
-            </Button>
-            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="{Binding XPath=Name}" FontSize="12"/>
-        </StackPanel>
-        
+        <ItemsControl ItemsSource="{Binding Documents}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Button Width="150" Height="150">
+                            <Button.Background>
+                                <ImageBrush ImageSource="{Binding Path=ImageName}"  TileMode="Tile" Stretch="UniformToFill"/>
+                            </Button.Background>
+                        </Button>
+                        <TextBlock Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" Text="{Binding Path=LinkName}" FontSize="12"/>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </UserControl>
+
+
+

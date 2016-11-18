@@ -1,22 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <documents>
-  <document>
-    <Name>Приймальне відділення</Name>
+  <document Name="Приймальне відділення">
     <ImageName>/MedicoPlus;component/Images/lobby_256.png</ImageName>
     <ModuleName>Lobby</ModuleName>
   </document>
-  <document>
-    <Name>Адміністрування</Name>
+  <document Name="Адміністрування">
     <ImageName>/MedicoPlus;component/Images/Setup.png</ImageName>
     <ModuleName>Setup</ModuleName>
   </document>
-  <document>
-    <Name>Головна сторінка</Name>
+  <document Name="Головна сторінка">
     <ImageName>/MedicoPlus;component/Images/tablet_256.png</ImageName>
     <ModuleName>Desktop</ModuleName>
    </document>
-  <document>
-     <Name>Нормативно-довідкова інформація</Name>
+  <document Name="Нормативно-довідкова інформація">
      <ImageName>/MedicoPlus;component/Images/progress_notes_256.png</ImageName>
      <ModuleName>Helpers</ModuleName>
    </document>

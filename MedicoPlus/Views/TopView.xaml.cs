@@ -21,7 +21,7 @@ namespace MedicoPlus.Views
     /// </summary>
     public partial class TopView : UserControl
     {
-        public string name = Login.userAccess;
+       
         public TopView()
         {
             InitializeComponent();
@@ -32,14 +32,6 @@ namespace MedicoPlus.Views
             get { return DataContext as TopViewPresenter; }
             set { DataContext = value; }
         }
-        private void lobby_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
-
-        private void setup_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

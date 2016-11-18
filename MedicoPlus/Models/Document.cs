@@ -8,10 +8,11 @@ namespace MedicoPlus.Models
 {
     public class Document
     {
-        public string Name { get; }//текст ссылки
-        public string ImageName { get; }//картинка на кнопке
-        public string ModuleName { get; }// название модуля для загрузки
+        public string LinkName { get; set; } //текст ссылки
+        public string ImageName { get; set; }//картинка на кнопке
+        public string ModuleName { get; set; }// название модуля для загрузки
                                        //вся инфа хранится в XML - файле с номером доступа
+        public int count { get; set; }
 
         public override bool Equals(object obj)
         {
@@ -23,13 +24,17 @@ namespace MedicoPlus.Models
         private bool Equals(Document other)
         {
             if (ReferenceEquals(null, other)) return false;
-            return ReferenceEquals(this, other) || Equals(other.Name, Name);
+            return ReferenceEquals(this, other) || Equals(other.ModuleName, ModuleName);
         }
 
         public static explicit operator Document(string v)
         {
             throw new NotImplementedException();
         }
-       
+
+        public override int GetHashCode()
+        {
+            return ModuleName?.GetHashCode() ?? 0;
+        }
     }
 }

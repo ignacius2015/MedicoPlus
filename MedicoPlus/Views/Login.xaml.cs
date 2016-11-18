@@ -40,6 +40,7 @@ namespace MedicoPlus.Views
                         //userAccess = u.rules; пока закрыто, данные в другой базе
                         Bootstrapper bootstrapper = new Bootstrapper();
                         bootstrapper.Run();
+                        this.Close();
                     }
                     else
                     {

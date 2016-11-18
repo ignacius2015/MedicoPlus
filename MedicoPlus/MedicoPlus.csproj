@@ -109,6 +109,7 @@
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Helpers\SelectedDocumentEvent.cs" />
+    <Compile Include="Helpers\Variables.cs" />
     <Compile Include="Models\areas.cs" />
     <Compile Include="Models\cities.cs" />
     <Compile Include="Models\departaments.cs" />
@@ -292,7 +293,10 @@
     <Folder Include="Templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Helpers\view.xml" />
+    <EmbeddedResource Include="Helpers\admin.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
