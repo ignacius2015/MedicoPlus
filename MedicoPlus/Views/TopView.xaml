@@ -6,27 +6,23 @@
              xmlns:local="clr-namespace:MedicoPlus.Views"
              xmlns:help="clr-namespace:MedicoPlus.Helpers"
              mc:Ignorable="d">
-    
-    <Grid>
+
+    <StackPanel Orientation="Horizontal" Margin="0">
         <ItemsControl ItemsSource="{Binding Documents}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Button Width="150" Height="150" Click="{Binding SelectedItem, Mode=OneWayToSource}">
-                            <Button.Background>
-                                <ImageBrush ImageSource="{Binding Path=ImageName}"  TileMode="Tile" Stretch="UniformToFill"/>
-                            </Button.Background>
-                        </Button>
-                        <TextBlock Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" Text="{Binding Path=LinkName}" FontSize="12" />
-                    </Grid>
+                        <StackPanel>
+                            <Button Width="70" Height="70" Margin="5">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="{Binding Path=ImageName}"/>
+                                </Button.Background>
+                            </Button>
+                            <TextBlock Margin="5" Height="26" TextWrapping="Wrap" Width="150" TextAlignment="Center" Text="{Binding Path=LinkName}" FontSize="9" />
+                        </StackPanel>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-    </Grid>
+    </StackPanel>
 </UserControl>
 
 

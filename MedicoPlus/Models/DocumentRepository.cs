@@ -18,7 +18,7 @@ namespace MedicoPlus.Models
         List<Document> document = new List<Document>();
         public IList<Document> GetData()
         {
-            Document doc= new Document();
+            
             XmlDocument xDoc = new XmlDocument();
             // xDoc.Load("Helpers\\"+name+".xml");
             xDoc.Load("Helpers\\admin.xml");
@@ -26,8 +26,11 @@ namespace MedicoPlus.Models
             XmlElement xRoot = xDoc.DocumentElement;
             // обход всех узлов в корневом элементе
             if (xRoot != null)
+            {
+               
                 foreach (XmlNode xnode in xRoot)
                 {
+                    Document doc = new Document();
                     // получаем атрибут Name
                     if (xnode.Attributes != null && xnode.Attributes.Count > 0)
                     {
@@ -44,7 +47,11 @@ namespace MedicoPlus.Models
                         {
                             doc.ImageName = childnode.InnerText;
                         }
-                        
+                        if (childnode.Name == "ModuleName")
+                        {
+                            doc.ModuleName = childnode.InnerText;
+                        }
+
                     }
                     if (xnode.Name == "count")
                     {
@@ -52,7 +59,8 @@ namespace MedicoPlus.Models
                     }
                     document.Add(doc);
                 }
-            
+            }
+
             return document;
         }
     }
