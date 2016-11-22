@@ -7,22 +7,29 @@
              xmlns:help="clr-namespace:MedicoPlus.Helpers"
              mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" Margin="0">
+    <Grid>
         <ItemsControl ItemsSource="{Binding Documents}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                        <StackPanel>
-                            <Button Width="70" Height="70" Margin="5">
-                                <Button.Background>
-                                    <ImageBrush ImageSource="{Binding Path=ImageName}"/>
-                                </Button.Background>
-                            </Button>
-                            <TextBlock Margin="5" Height="26" TextWrapping="Wrap" Width="150" TextAlignment="Center" Text="{Binding Path=LinkName}" FontSize="9" />
-                        </StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="75"/>
+                            <RowDefinition Height="26"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="75"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Width="70" Height="70" Margin="5">
+                            <Button.Background>
+                                <ImageBrush ImageSource="{Binding Path=ImageName}"/>
+                            </Button.Background>
+                        </Button>
+                        <TextBlock Grid.Row="1"  Margin="5" Height="26" TextWrapping="Wrap" Width="150" TextAlignment="Center" Text="{Binding Path=LinkName}" FontSize="9" />
+                    </Grid>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-    </StackPanel>
+    </Grid>
 </UserControl>
 
 

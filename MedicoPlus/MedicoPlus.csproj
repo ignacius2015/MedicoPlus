@@ -108,6 +108,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Helpers\GridHelpers.cs" />
     <Compile Include="Helpers\SelectedDocumentEvent.cs" />
     <Compile Include="Models\areas.cs" />
     <Compile Include="Models\cities.cs" />

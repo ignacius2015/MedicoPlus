@@ -25,7 +25,6 @@ namespace MedicoPlus
         {
             ModuleCatalog catalog = new ModuleCatalog();
             catalog.AddModule(typeof(TopViewModule));
-           // catalog.AddModule(typeof(Form001.Views.Form001));
             return catalog;
         }
     }
