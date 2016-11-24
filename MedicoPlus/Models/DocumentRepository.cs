@@ -53,10 +53,6 @@ namespace MedicoPlus.Models
                         }
 
                     }
-                    if (xnode.Name == "count")
-                    {
-                        doc.count = Convert.ToInt32(xnode.InnerText);
-                    }
                     document.Add(doc);
                 }
             }

@@ -6,30 +6,36 @@
              xmlns:local="clr-namespace:MedicoPlus.Views"
              xmlns:help="clr-namespace:MedicoPlus.Helpers"
              mc:Ignorable="d">
-
-    <Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Visible">
+        <Grid>
         <ItemsControl ItemsSource="{Binding Documents}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="15"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="75"/>
-                            <RowDefinition Height="26"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="75"/>
-                        </Grid.ColumnDefinitions>
-                        <Button Grid.Row="0" Width="70" Height="70" Margin="5">
-                            <Button.Background>
-                                <ImageBrush ImageSource="{Binding Path=ImageName}"/>
-                            </Button.Background>
-                        </Button>
-                        <TextBlock Grid.Row="1"  Margin="5" Height="26" TextWrapping="Wrap" Width="150" TextAlignment="Center" Text="{Binding Path=LinkName}" FontSize="9" />
-                    </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="120"/>
+                                <RowDefinition Height="35"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="105"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Row="0" Width="100" Height="100" IsEnabled="{Binding SelectedItem, Mode=OneWayToSource}">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="{Binding Path=ImageName}"/>
+                                </Button.Background>
+                            </Button>
+                            <TextBlock Grid.Row="1"  Margin="5" Height="26" TextWrapping="Wrap" Width="100" TextAlignment="Left" Text="{Binding Path=LinkName}" FontSize="9" />
+                        </Grid>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
     </Grid>
+    </ScrollViewer>
 </UserControl>
 
 

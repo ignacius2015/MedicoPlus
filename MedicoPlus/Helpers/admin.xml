@@ -14,7 +14,14 @@
    </document>
   <document Name="Нормативно-довідкова інформація">
      <ImageName>/MedicoPlus;component/Images/progress_notes_256.png</ImageName>
-     <ModuleName>Helpers</ModuleName>
+     <ModuleName>Informs</ModuleName>
    </document>
-  <count>4</count>
+  <document Name="Налаштування закладу">
+     <ImageName>/MedicoPlus;component/Images/hospital_256.png</ImageName>
+     <ModuleName>Hospital</ModuleName>
+   </document>
+<document Name="Маркетінг">
+     <ImageName>/MedicoPlus;component/Images/appointment_256.png</ImageName>
+     <ModuleName>Marketing</ModuleName>
+   </document>
 </documents>
