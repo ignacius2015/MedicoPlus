@@ -8,9 +8,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Xml;
 using MedicoPlus.Helpers;
+using MedicoPlus.Models;
 using MedicoPlus.Views;
 
-namespace MedicoPlus.Models
+namespace MedicoPlus.Repos
 {
     public class DocumentRepository : IDocumentRepository
     {

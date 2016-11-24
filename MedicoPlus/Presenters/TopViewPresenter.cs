@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MedicoPlus.Helpers;
 using MedicoPlus.Models;
+using MedicoPlus.Repos;
 using MedicoPlus.Views;
 using Prism.Events;
 

@@ -20,8 +20,40 @@
      <ImageName>/MedicoPlus;component/Images/hospital_256.png</ImageName>
      <ModuleName>Hospital</ModuleName>
    </document>
-<document Name="Маркетінг">
+  <document Name="Маркетінг">
      <ImageName>/MedicoPlus;component/Images/appointment_256.png</ImageName>
      <ModuleName>Marketing</ModuleName>
+   </document>
+  <document Name="договори і взаєморозрахунки">
+     <ImageName>/MedicoPlus;component/Images/insurance_billing_256.png</ImageName>
+     <ModuleName>treaties</ModuleName>
+   </document>
+  <document Name="реєстратура">
+     <ImageName>/MedicoPlus;component/Images/medical_history_256.png</ImageName>
+     <ModuleName>registry</ModuleName>
+   </document>
+  <document Name="листки непрацездатності">
+     <ImageName>/MedicoPlus;component/Images/PatientFile.png</ImageName>
+     <ModuleName>sheets</ModuleName>
+   </document>
+  <document Name="автоматизована торгова точка">
+     <ImageName>/MedicoPlus;component/Images/DefineControls.png</ImageName>
+     <ModuleName>trading point</ModuleName>
+   </document>
+  <document Name="відділення">
+     <ImageName>/MedicoPlus;component/Images/hospital_bed_256.png</ImageName>
+     <ModuleName>office</ModuleName>
+   </document>
+  <document Name="керівник">
+     <ImageName>/MedicoPlus;component/Images/chief_of_staff_256.png</ImageName>
+     <ModuleName>chief</ModuleName>
+   </document>
+  <document Name="електронні медичні картки">
+     <ImageName>/MedicoPlus;component/Images/PatientData.png</ImageName>
+     <ModuleName>health records</ModuleName>
+   </document>
+  <document Name="органайзер">
+     <ImageName>/MedicoPlus;component/Images/ChronologicalReview.png</ImageName>
+     <ModuleName>organizer</ModuleName>
    </document>
 </documents>

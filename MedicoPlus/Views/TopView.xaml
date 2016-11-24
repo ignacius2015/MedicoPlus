@@ -6,10 +6,10 @@
              xmlns:local="clr-namespace:MedicoPlus.Views"
              xmlns:help="clr-namespace:MedicoPlus.Helpers"
              mc:Ignorable="d">
-    <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Visible">
-        <Grid>
-        <ItemsControl ItemsSource="{Binding Documents}">
-            <ItemsControl.ItemsPanel>
+    <ScrollViewer x:Name="scroll" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Visible">
+       <Grid>
+                <ItemsControl ItemsSource="{Binding Documents}">
+                <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel Orientation="Horizontal" Margin="15"/>
                 </ItemsPanelTemplate>

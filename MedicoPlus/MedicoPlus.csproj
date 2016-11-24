@@ -113,11 +113,11 @@
     <Compile Include="Models\areas.cs" />
     <Compile Include="Models\cities.cs" />
     <Compile Include="Models\departaments.cs" />
-    <Compile Include="Models\Document.cs" />
-    <Compile Include="Models\DocumentRepository.cs" />
+    <Compile Include="Repos\Document.cs" />
+    <Compile Include="Repos\DocumentRepository.cs" />
     <Compile Include="Models\documents.cs" />
     <Compile Include="Models\hospitals.cs" />
-    <Compile Include="Models\IDocumentRepository.cs" />
+    <Compile Include="Repos\IDocumentRepository.cs" />
     <Compile Include="Models\mkh.cs" />
     <Compile Include="Models\MySQL.cs" />
     <Compile Include="Models\online.cs" />
@@ -126,9 +126,16 @@
     <Compile Include="Models\regions.cs" />
     <Compile Include="Models\users.cs" />
     <Compile Include="Modules\TopViewModule.cs" />
+    <Compile Include="Presenters\LeftViewPresenter.cs" />
     <Compile Include="Presenters\TopViewPresenter.cs" />
+    <Compile Include="Repos\ILeftSideRepository.cs" />
+    <Compile Include="Repos\LeftSideDocument.cs" />
+    <Compile Include="Repos\LeftSideDocumentRepository.cs" />
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LeftView.xaml.cs">
+      <DependentUpon>LeftView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -153,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Shell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LeftView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -297,6 +308,10 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ChevronLeft-128.png" />
+    <Resource Include="Images\ChevronRight-128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

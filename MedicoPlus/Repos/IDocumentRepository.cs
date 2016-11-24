@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MedicoPlus.Models
+namespace MedicoPlus.Repos
 {
     public interface IDocumentRepository
     {
