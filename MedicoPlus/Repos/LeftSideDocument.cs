@@ -10,6 +10,7 @@ namespace MedicoPlus.Repos
     {
         public string LinkName { get; set; } //текст ссылки
         public string ModuleName { get; set; }// название модуля для загрузки
+        public string Hint { get; set; }//всплывающее сообщение
 
         public override bool Equals(object obj)
         {

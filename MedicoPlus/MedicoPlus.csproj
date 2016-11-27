@@ -114,7 +114,9 @@
     <Compile Include="Models\cities.cs" />
     <Compile Include="Models\departaments.cs" />
     <Compile Include="Modules\LeftViewModule.cs" />
+    <Compile Include="Properties\Annotations1.cs" />
     <Compile Include="Repos\Document.cs" />
+    <Compile Include="Repos\DocumentPresentationModel.cs" />
     <Compile Include="Repos\DocumentRepository.cs" />
     <Compile Include="Models\documents.cs" />
     <Compile Include="Models\hospitals.cs" />
