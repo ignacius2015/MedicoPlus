@@ -15,7 +15,7 @@ namespace MedicoPlus.Repos
         {
             XmlDocument xDoc = new XmlDocument();
             // xDoc.Load("Helpers\\"+name+".xml");
-            xDoc.Load("Helpers\\admin.xml");
+            xDoc.Load("Helpers\\Setup.xml");
             // получим корневой элемент
             XmlElement xRoot = xDoc.DocumentElement;
 

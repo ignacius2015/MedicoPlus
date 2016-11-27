@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<modules>
+  <module>
+    <linkname>підтримка і обслуговування</linkname>
+    <modulename>support</modulename>
+    <hint>контроль за станом програми, резервне копіювання і відновлення, оновлення версії програми</hint>
+  </module>
+  <module>
+    <linkname>настройки користувачів і прав</linkname>
+    <modulename>users</modulename>
+    <hint>адміністрування користувачів, настройка груп доступу, надання доступу зовнішнім користувачам, управління призначеними для користувача настройками</hint>
+  </module>
+  <module>
+    <linkname>загальні налаштування</linkname>
+    <modulename>general</modulename>
+    <hint>створення і зміна додаткових реквізитів та інших загальних налаштувань</hint>
+  </module>
+  <module>
+    <linkname>організації та грошові кошти</linkname>
+    <modulename>funds</modulename>
+    <hint>управління параметрами організації, валютного обліку та обліку грошових коштів</hint>
+  </module>
+  <module>
+    <linkname>маркетинг і планування</linkname>
+    <modulename>marketing</modulename>
+    <hint>управління настройками цін, знижок і націнок. Налаштування параметрів планування.</hint>
+  </module>
+  <module>
+    <linkname>CRM</linkname>
+    <modulename>CRM</modulename>
+    <hint>управління настройками цін, знижок і націнок. Oблік замовлень клієнтів, рахунків на оплату, комісійних продажів, повернень від клієнтів.</hint>
+  </module>
+  <module>
+    <linkname>обладнання</linkname>
+    <modulename>equipment</modulename>
+    <hint>настройка сканерів штрих кодів, зчитувачів магнітних карт, фіскальних реєстраторів та іншого обладнання, що підключається.</hint>
+  </module>
+  <module>
+    <linkname>реєстратура</linkname>
+    <modulename>registry</modulename>
+    <hint>налаштування роботи реєстратури</hint>
+  </module>
+  <module>
+    <linkname>органайзер</linkname>
+    <modulename>organizer</modulename>
+    <hint>налаштування електронної пошти, заміток, нагадувань і бізнес-процесів.</hint>
+  </module>
+  <module>
+    <linkname>взаємодії</linkname>
+    <modulename>interaction</modulename>
+    <hint>налаштування роботи з телефонними дзвінками та СМС</hint>
+  </module>
+  <module>
+    <linkname>налаштування роботи з файлами</linkname>
+    <modulename>files</modulename>
+    <hint>налаштування параметрів завантаження, зберігання і обробки файлів</hint>
+  </module>
+  <module>
+    <linkname>друковані форми, звіти і обробки</linkname>
+    <modulename>forms</modulename>
+    <hint>налаштування друкованих форм, варіантів звітів, розсилок звітів, додаткових звітів і обробок</hint>
+  </module>
+</modules>

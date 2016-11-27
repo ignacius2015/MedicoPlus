@@ -113,6 +113,7 @@
     <Compile Include="Models\areas.cs" />
     <Compile Include="Models\cities.cs" />
     <Compile Include="Models\departaments.cs" />
+    <Compile Include="Modules\LeftViewModule.cs" />
     <Compile Include="Repos\Document.cs" />
     <Compile Include="Repos\DocumentRepository.cs" />
     <Compile Include="Models\documents.cs" />
@@ -312,6 +313,9 @@
   <ItemGroup>
     <Resource Include="Images\ChevronLeft-128.png" />
     <Resource Include="Images\ChevronRight-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Helpers\Setup.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
