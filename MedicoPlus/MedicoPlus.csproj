@@ -317,7 +317,9 @@
     <Resource Include="Images\ChevronRight-128.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Helpers\Setup.xml" />
+    <EmbeddedResource Include="Helpers\Setup.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

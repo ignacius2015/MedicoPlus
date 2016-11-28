@@ -17,6 +17,7 @@ namespace MedicoPlus.Repos
             modulename = document.ModuleName;
         }
 
+        public string ModuleName => modulename;
         public Document Document { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(string PropertyName)

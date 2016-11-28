@@ -6,7 +6,23 @@
              xmlns:local="clr-namespace:MedicoPlus.Views"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
-    </Grid>
+    <ScrollViewer x:Name="scroll" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden">
+        <Grid>
+            <ItemsControl ItemsSource="{Binding LeftSideDocuments}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="105"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Row="0" Width="100" Height="35" IsEnabled="{Binding SelectedItem, Mode=OneWayToSource}" Content="{Binding Path=LinkName}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+    </ScrollViewer>
 </UserControl>

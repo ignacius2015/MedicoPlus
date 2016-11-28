@@ -8,6 +8,6 @@ namespace MedicoPlus.Repos
 {
     public interface ILeftSideRepository
     {
-        IList<LeftSideDocument> GetData();
+        IList<LeftSideDocument> GetDocs();
     }
 }

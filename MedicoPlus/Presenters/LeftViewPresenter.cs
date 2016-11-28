@@ -15,27 +15,38 @@ namespace MedicoPlus.Presenters
 {
     public class LeftViewPresenter:INotifyPropertyChanged
     {
-        private readonly LeftView _view;
-        private readonly ILeftSideRepository _repository;
+        private readonly ILeftSideRepository _peRepository;
+        private readonly IDocumentRepository _repository;
         private readonly IEventAggregator _eventAggregator;
         private readonly IDictionary<Document, DocumentPresentationModel> _models = new Dictionary<Document, DocumentPresentationModel>();
-        public LeftViewPresenter(LeftView view, ILeftSideRepository repository, IEventAggregator eventAggregator)
+        public LeftViewPresenter(LeftView view, ILeftSideRepository _peRepository, IDocumentRepository repository, IEventAggregator eventAggregator)
         {
             View = view;
+            this._peRepository = _peRepository;
             _repository = repository;
             _eventAggregator = eventAggregator;
             View.Model = this;
+            PopulateDocuments();
             _eventAggregator.GetEvent<SelectedDocumentEvent>().Subscribe(OnSelect);
 
         }
         private void OnSelect(Document obj)
         {
             SelectedDocument = _models[obj];
-            OnPropertyChanged("SelectedDocument");
+            OnPropertyChanged(nameof(SelectedDocument));
+        }
+        private void PopulateDocuments()
+        {
+            var documents = _repository.GetData() as List<Document>;
+            documents?.ForEach(x =>
+            {
+                var model = new DocumentPresentationModel(x);
+                _models.Add(x, model);
+            });
         }
         public LeftView View { get; }
         public DocumentPresentationModel SelectedDocument { get; set; }
-        public IList<LeftSideDocument> Documents => _repository.GetData();
+        public IList<LeftSideDocument> LeftDocuments => _peRepository.GetDocs();
         public LeftSideDocument SelectedItem
         {
             set { _eventAggregator.GetEvent<SelectedLeftDocumentEvent>().Publish(value); }

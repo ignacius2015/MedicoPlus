@@ -11,15 +11,38 @@ namespace MedicoPlus.Repos
     {
         List<LeftSideDocument> document = new List<LeftSideDocument>();
 
-        public IList<LeftSideDocument> GetData()
+        public IList<LeftSideDocument> GetDocs()
         {
             XmlDocument xDoc = new XmlDocument();
             // xDoc.Load("Helpers\\"+name+".xml");
             xDoc.Load("Helpers\\Setup.xml");
             // получим корневой элемент
             XmlElement xRoot = xDoc.DocumentElement;
-
-            return document;
+            if (xRoot != null)
+            {
+                foreach (XmlNode xnode in xRoot)
+                {
+                    LeftSideDocument doc=new LeftSideDocument();
+                    foreach (XmlNode childnode in xnode.ChildNodes)
+                    {
+                        // если узел - ImageName
+                        if (childnode.Name == "linkmame")
+                        {
+                            doc.LinkName = childnode.InnerText;
+                        }
+                        if (childnode.Name == "modulename")
+                        {
+                            doc.ModuleName = childnode.InnerText;
+                        }
+                        if (childnode.Name == "hint")
+                        {
+                            doc.Hint = childnode.InnerText;
+                        }
+                    }
+                    document.Add(doc);
+                }
+            }
+                return document;
         }
     }
 }
