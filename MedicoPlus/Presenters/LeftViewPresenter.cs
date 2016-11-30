@@ -15,14 +15,14 @@ namespace MedicoPlus.Presenters
 {
     public class LeftViewPresenter:INotifyPropertyChanged
     {
-        private readonly ILeftSideRepository _peRepository;
+        private readonly ILeftSideRepository peRepository;
         private readonly IDocumentRepository _repository;
         private readonly IEventAggregator _eventAggregator;
         private readonly IDictionary<Document, DocumentPresentationModel> _models = new Dictionary<Document, DocumentPresentationModel>();
         public LeftViewPresenter(LeftView view, ILeftSideRepository _peRepository, IDocumentRepository repository, IEventAggregator eventAggregator)
         {
             View = view;
-            this._peRepository = _peRepository;
+            peRepository = _peRepository;
             _repository = repository;
             _eventAggregator = eventAggregator;
             View.Model = this;
@@ -46,7 +46,7 @@ namespace MedicoPlus.Presenters
         }
         public LeftView View { get; }
         public DocumentPresentationModel SelectedDocument { get; set; }
-        public IList<LeftSideDocument> LeftDocuments => _peRepository.GetDocs();
+        public IList<LeftSideDocument> LeftDocuments => peRepository.GetDocs();
         public LeftSideDocument SelectedItem
         {
             set { _eventAggregator.GetEvent<SelectedLeftDocumentEvent>().Publish(value); }

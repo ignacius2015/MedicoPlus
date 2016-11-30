@@ -304,6 +304,7 @@
   <ItemGroup>
     <Folder Include="Docs\" />
     <Folder Include="Forms\" />
+    <Folder Include="Helpers\Admission\" />
     <Folder Include="Templates\" />
   </ItemGroup>
   <ItemGroup>
@@ -317,9 +318,12 @@
     <Resource Include="Images\ChevronRight-128.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Helpers\Setup.xml">
+    <EmbeddedResource Include="Helpers\Admin\Setup.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Helpers\admission.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

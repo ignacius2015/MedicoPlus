@@ -18,7 +18,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="105"/>
                             </Grid.ColumnDefinitions>
-                            <Button Grid.Row="0" Width="100" Height="35" IsEnabled="{Binding SelectedItem, Mode=OneWayToSource}" Content="{Binding Path=LinkName}"/>
+                            <Button Grid.Row="0" Width="100" Height="50" IsEnabled="{Binding SelectedItem, Mode=OneWayToSource}" Content="{Binding Path=LinkName}"/>
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

@@ -6,7 +6,7 @@
   </document>
   <document Name="Адміністрування">
     <ImageName>/MedicoPlus;component/Images/Setup.png</ImageName>
-    <ModuleName>Setup</ModuleName>
+    <ModuleName>Admin\\Setup</ModuleName>
   </document>
   <document Name="Головна сторінка">
     <ImageName>/MedicoPlus;component/Images/tablet_256.png</ImageName>
