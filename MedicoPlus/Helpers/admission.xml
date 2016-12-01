@@ -6,10 +6,10 @@
    </document>
   <document Name="Приймальне відділення">
     <ImageName>/MedicoPlus;component/Images/lobby_256.png</ImageName>
-    <ModuleName>Lobby</ModuleName>
+    <ModuleName>Admission\\Lobby</ModuleName>
   </document>
  <document Name="органайзер">
      <ImageName>/MedicoPlus;component/Images/ChronologicalReview.png</ImageName>
-     <ModuleName>organizer</ModuleName>
+     <ModuleName>Admission\\organizer</ModuleName>
    </document>
 </documents>

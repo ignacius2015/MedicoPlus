@@ -2,58 +2,58 @@
 <documents>
   <document Name="Приймальне відділення">
     <ImageName>/MedicoPlus;component/Images/lobby_256.png</ImageName>
-    <ModuleName>Lobby</ModuleName>
+    <ModuleName>Admin\Lobby</ModuleName>
   </document>
   <document Name="Адміністрування">
     <ImageName>/MedicoPlus;component/Images/Setup.png</ImageName>
-    <ModuleName>Admin\\Setup</ModuleName>
+    <ModuleName>Admin\Setup</ModuleName>
   </document>
   <document Name="Головна сторінка">
     <ImageName>/MedicoPlus;component/Images/tablet_256.png</ImageName>
-    <ModuleName>Desktop</ModuleName>
+    <ModuleName>Admin\Desktop</ModuleName>
    </document>
   <document Name="Нормативно-довідкова інформація">
      <ImageName>/MedicoPlus;component/Images/progress_notes_256.png</ImageName>
-     <ModuleName>Informs</ModuleName>
+     <ModuleName>Admin\Informs</ModuleName>
    </document>
   <document Name="Налаштування закладу">
      <ImageName>/MedicoPlus;component/Images/hospital_256.png</ImageName>
-     <ModuleName>Hospital</ModuleName>
+     <ModuleName>Admin\Hospital</ModuleName>
    </document>
   <document Name="Маркетінг">
      <ImageName>/MedicoPlus;component/Images/appointment_256.png</ImageName>
-     <ModuleName>Marketing</ModuleName>
+     <ModuleName>Admin\Marketing</ModuleName>
    </document>
   <document Name="договори і взаєморозрахунки">
      <ImageName>/MedicoPlus;component/Images/insurance_billing_256.png</ImageName>
-     <ModuleName>treaties</ModuleName>
+     <ModuleName>Admin\treaties</ModuleName>
    </document>
   <document Name="реєстратура">
      <ImageName>/MedicoPlus;component/Images/medical_history_256.png</ImageName>
-     <ModuleName>registry</ModuleName>
+     <ModuleName>Admin\registry</ModuleName>
    </document>
   <document Name="листки непрацездатності">
      <ImageName>/MedicoPlus;component/Images/PatientFile.png</ImageName>
-     <ModuleName>sheets</ModuleName>
+     <ModuleName>Admin\\sheets</ModuleName>
    </document>
   <document Name="автоматизована торгова точка">
      <ImageName>/MedicoPlus;component/Images/DefineControls.png</ImageName>
-     <ModuleName>trading point</ModuleName>
+     <ModuleName>Admin\trading point</ModuleName>
    </document>
   <document Name="відділення">
      <ImageName>/MedicoPlus;component/Images/hospital_bed_256.png</ImageName>
-     <ModuleName>office</ModuleName>
+     <ModuleName>Admin\office</ModuleName>
    </document>
   <document Name="керівник">
      <ImageName>/MedicoPlus;component/Images/chief_of_staff_256.png</ImageName>
-     <ModuleName>chief</ModuleName>
+     <ModuleName>Admin\chief</ModuleName>
    </document>
   <document Name="електронні медичні картки">
      <ImageName>/MedicoPlus;component/Images/PatientData.png</ImageName>
-     <ModuleName>health records</ModuleName>
+     <ModuleName>Admin\health records</ModuleName>
    </document>
   <document Name="органайзер">
      <ImageName>/MedicoPlus;component/Images/ChronologicalReview.png</ImageName>
-     <ModuleName>organizer</ModuleName>
+     <ModuleName>Admin\organizer</ModuleName>
    </document>
 </documents>
