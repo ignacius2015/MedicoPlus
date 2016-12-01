@@ -53,5 +53,24 @@ namespace MedicoPlus.Views
 
 
         }
+
+
+        private void TitleBar_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
+        }
+
+        private void password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                Enter_Click(new object(), new RoutedEventArgs());
+            }
+        }
     }
 }

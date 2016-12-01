@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using MedicoPlus.Helpers;
 using MedicoPlus.Repos;
 using MedicoPlus.Views;
 using Prism.Events;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using MedicoPlus.Annotations;
 
 namespace MedicoPlus.Presenters
