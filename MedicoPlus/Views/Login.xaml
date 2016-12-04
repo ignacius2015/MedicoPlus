@@ -5,14 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MedicoPlus.Views"
         mc:Ignorable="d"
-        Title="МедікоПлюс. Вхід до системи" Height="180" Width="331">
-    <Grid Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}">
-        <Label x:Name="label" Content="Логін" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="login" HorizontalAlignment="Left" Height="23" Margin="129,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
-        <Label x:Name="label1" Content="Пароль" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center"/>
-        
-        <Button x:Name="Enter" Content="Увійти" HorizontalAlignment="Center" Margin="0,107,0,0" VerticalAlignment="Top" Width="75" Click="Enter_Click"/>
-        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="129,65,0,0" VerticalAlignment="Top" Width="160"/>
+        Title="МедікоПлюс. Вхід до системи" Height="172.5" Width="287" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderThickness="0" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None" >
 
-    </Grid>
+    <Border OverridesDefaultStyle="True" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" ScrollViewer.VerticalScrollBarVisibility="Hidden" CornerRadius="5" Background="White" BorderBrush="#FF1995DC" BorderThickness="1" FocusManager.FocusedElement="{Binding ElementName=login}">
+        <Grid x:Name="MainGrid" IsManipulationEnabled="True" >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label  x:Name="login_label" Content="Логін" HorizontalAlignment="Left" Margin="11,48.5,0,0" VerticalAlignment="Top" Width="56" HorizontalContentAlignment="Center" Height="30" RenderTransformOrigin="0.571,-0.033"/>
+            <TextBox x:Name="login" HorizontalAlignment="Left" Margin="72,48.5,0,0" TextWrapping="Wrap" Width="200" TabIndex="1" Height="30" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="#FFC8C8C8"/>
+            <Label x:Name="password_label" Content="Пароль" HorizontalAlignment="Left" Margin="11,89.334,0,0" VerticalAlignment="Top" Width="56" HorizontalContentAlignment="Center" Height="30"/>
+            <PasswordBox x:Name="password" Margin="72,89.334,0,51.165" Width="200" TabIndex="2" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#FFC8C8C8" Height="30" KeyDown="password_KeyDown"/>
+
+            <Label  x:Name="label_Copy" Content="МедікоПлюс. Вхід до системи" Margin="43,4.166,49.335,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Height="30"/>
+            <Button x:Name="LoginBtn" Content="Увійти" Margin="72,130.5,118,0" VerticalAlignment="Top" Click="Enter_Click" TabIndex="3" Height="30" Background="#FFC8C8C8" BorderBrush="#FFAAAAAA" Width="95"/>
+            <Rectangle x:Name="TitleBar" Height="36.334" Margin="0,-0.167,0,0" Stroke="Black" VerticalAlignment="Top" RadiusY="5" RadiusX="5" MouseDown="TitleBar_MouseDown_1" StrokeThickness="0" Fill="Black" Opacity="0"/>
+            <Rectangle Fill="White" Height="0.5" Margin="0,36.167,0,0" Stroke="#FF006AD4" VerticalAlignment="Top"/>
+            <Button x:Name="ExitBtn" Content="Скасувати" Margin="0,130.5,13,0" VerticalAlignment="Top" TabIndex="3" Height="30" Background="#FFC8C8C8" BorderBrush="#FFAAAAAA" HorizontalAlignment="Right" Width="95" Click="Exit_Click"/>
+
+        </Grid>
+    </Border>
+
 </Window>
