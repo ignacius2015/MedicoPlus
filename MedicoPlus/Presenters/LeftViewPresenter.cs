@@ -46,7 +46,7 @@ namespace MedicoPlus.Presenters
         }
         public LeftView View { get; }
         public DocumentPresentationModel SelectedDocument { get; set; }
-        public IList<LeftSideDocument> LeftDocuments => _peRepository.GetDocs();
+       public IList<LeftSideDocument> LeftDocuments => _peRepository.GetDocs();
         //public LeftSideDocument SelectedItem
         //{
         //    set { _eventAggregator.GetEvent<SelectedLeftDocumentEvent>().Publish(value); }
