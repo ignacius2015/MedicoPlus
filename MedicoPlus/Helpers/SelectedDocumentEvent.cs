@@ -13,7 +13,5 @@ namespace MedicoPlus.Helpers
     public class SelectedDocumentEvent: PubSubEvent<Document>
     {
     }
-    public class SelectedLeftDocumentEvent : PubSubEvent<LeftSideDocument>
-    {
-    }
+   
 }

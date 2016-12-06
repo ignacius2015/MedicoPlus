@@ -132,9 +132,8 @@
     <Compile Include="Modules\TopViewModule.cs" />
     <Compile Include="Presenters\LeftViewPresenter.cs" />
     <Compile Include="Presenters\TopViewPresenter.cs" />
-    <Compile Include="Repos\ILeftSideRepository.cs" />
-    <Compile Include="Repos\LeftSideDocument.cs" />
-    <Compile Include="Repos\LeftSideDocumentRepository.cs" />
+    <Compile Include="Repos\ILeftDocument.cs" />
+    <Compile Include="Repos\LeftDocumentRepository.cs" />
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
@@ -321,10 +320,16 @@
   <ItemGroup>
     <EmbeddedResource Include="Helpers\Admin\Setup.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Helpers\admission.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Helpers\Background.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

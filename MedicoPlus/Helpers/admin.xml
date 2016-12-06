@@ -1,58 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <documents>
-  <document Name="Приймальне відділення">
+  <document>
+    <LinkName>Приймальне відділення</LinkName>
     <ImageName>/MedicoPlus;component/Images/lobby_256.png</ImageName>
     <ModuleName>Admin\Lobby</ModuleName>
   </document>
-  <document Name="Адміністрування">
+  <document>
+   <LinkName>Адміністрування</LinkName>
     <ImageName>/MedicoPlus;component/Images/Setup.png</ImageName>
     <ModuleName>Admin\Setup</ModuleName>
   </document>
-  <document Name="Головна сторінка">
+  <document>
+    <LinkName>Головна сторінка</LinkName>
     <ImageName>/MedicoPlus;component/Images/tablet_256.png</ImageName>
     <ModuleName>Admin\Desktop</ModuleName>
    </document>
-  <document Name="Нормативно-довідкова інформація">
+  <document>
+    <LinkName>Нормативно-довідкова інформація</LinkName>
      <ImageName>/MedicoPlus;component/Images/progress_notes_256.png</ImageName>
      <ModuleName>Admin\Informs</ModuleName>
    </document>
-  <document Name="Налаштування закладу">
+  <document>
+    <LinkName>Налаштування закладу</LinkName>
      <ImageName>/MedicoPlus;component/Images/hospital_256.png</ImageName>
      <ModuleName>Admin\Hospital</ModuleName>
    </document>
-  <document Name="Маркетінг">
+  <document>
+    <LinkName>Маркетінг</LinkName>
      <ImageName>/MedicoPlus;component/Images/appointment_256.png</ImageName>
      <ModuleName>Admin\Marketing</ModuleName>
    </document>
-  <document Name="договори і взаєморозрахунки">
+  <document>
+   <LinkName>договори і взаєморозрахунки</LinkName>
      <ImageName>/MedicoPlus;component/Images/insurance_billing_256.png</ImageName>
      <ModuleName>Admin\treaties</ModuleName>
    </document>
-  <document Name="реєстратура">
+  <document>
+    <LinkName>реєстратура</LinkName>
      <ImageName>/MedicoPlus;component/Images/medical_history_256.png</ImageName>
      <ModuleName>Admin\registry</ModuleName>
    </document>
-  <document Name="листки непрацездатності">
+  <document>
+    <LinkName>листки непрацездатності</LinkName>
      <ImageName>/MedicoPlus;component/Images/PatientFile.png</ImageName>
      <ModuleName>Admin\\sheets</ModuleName>
    </document>
-  <document Name="автоматизована торгова точка">
+  <document>
+   <LinkName>автоматизована торгова точка</LinkName>
      <ImageName>/MedicoPlus;component/Images/DefineControls.png</ImageName>
      <ModuleName>Admin\trading point</ModuleName>
    </document>
-  <document Name="відділення">
+  <document>
+    <LinkName>відділення</LinkName>
      <ImageName>/MedicoPlus;component/Images/hospital_bed_256.png</ImageName>
      <ModuleName>Admin\office</ModuleName>
    </document>
-  <document Name="керівник">
+  <document>
+    <LinkName>керівник</LinkName>
      <ImageName>/MedicoPlus;component/Images/chief_of_staff_256.png</ImageName>
      <ModuleName>Admin\chief</ModuleName>
    </document>
-  <document Name="електронні медичні картки">
+  <document>
+    <LinkName>електронні медичні картки</LinkName>
      <ImageName>/MedicoPlus;component/Images/PatientData.png</ImageName>
      <ModuleName>Admin\health records</ModuleName>
    </document>
-  <document Name="органайзер">
+  <document>
+    <LinkName>органайзер</LinkName>
      <ImageName>/MedicoPlus;component/Images/ChronologicalReview.png</ImageName>
      <ModuleName>Admin\organizer</ModuleName>
    </document>

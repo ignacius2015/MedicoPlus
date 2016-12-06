@@ -13,6 +13,7 @@ namespace MedicoPlus.Repos
         public string ModuleName { get; set; }// название модуля для загрузки
                                        //вся инфа хранится в XML - файле с номером доступа
         public int count { get; set; }
+        public string Hint { get; set; }
 
         public override bool Equals(object obj)
         {

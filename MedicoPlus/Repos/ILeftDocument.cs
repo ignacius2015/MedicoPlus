@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MedicoPlus.Repos
 {
-    public interface ILeftSideRepository
+    public interface ILeftDocument
     {
-        IList<LeftSideDocument> GetDocs();
+        IList<Document> GetData(string module);
     }
 }

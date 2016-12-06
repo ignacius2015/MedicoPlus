@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Prism.Modularity;
 
 namespace MedicoPlus.Repos
 {
@@ -17,7 +18,18 @@ namespace MedicoPlus.Repos
             modulename = document.ModuleName;
         }
 
-        public string ModuleName => modulename;
+        public string ModuleName
+        {
+            get { return modulename; }
+            set
+            {
+                if (value != modulename)
+                {
+                    modulename = value;
+                    OnPropertyChanged("ModuleName");
+                }
+            }
+        }
         public Document Document { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(string PropertyName)

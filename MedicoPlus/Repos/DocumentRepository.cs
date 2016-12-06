@@ -32,15 +32,8 @@ namespace MedicoPlus.Repos
                 foreach (XmlNode xnode in xRoot)
                 {
                     Document doc = new Document();
-                    // получаем атрибут Name
-                    if (xnode.Attributes != null && xnode.Attributes.Count > 0)
-                    {
-                        XmlNode attr = xnode.Attributes.GetNamedItem("Name");
-                        if (attr != null)
-                        {
-                            doc.LinkName = attr.Value;
-                        }
-                    }
+                    
+                    
                     foreach (XmlNode childnode in xnode.ChildNodes)
                     {
                         // если узел - ImageName
@@ -48,9 +41,17 @@ namespace MedicoPlus.Repos
                         {
                             doc.ImageName = childnode.InnerText;
                         }
-                        if (childnode.Name == "ModuleName")
+                        if (childnode.Name == "ModuleName"|| childnode.Name == "modulename")
                         {
                             doc.ModuleName = childnode.InnerText;
+                        }
+                        if (childnode.Name == "linkmame"|| childnode.Name == "LinkName")
+                        {
+                            doc.LinkName = childnode.InnerText;
+                        }
+                        if (childnode.Name == "hint")
+                        {
+                            doc.Hint = childnode.InnerText;
                         }
 
                     }

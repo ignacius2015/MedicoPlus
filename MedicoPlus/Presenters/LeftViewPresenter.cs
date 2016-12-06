@@ -10,15 +10,18 @@ namespace MedicoPlus.Presenters
 {
     public class LeftViewPresenter:INotifyPropertyChanged
     {
-        private readonly ILeftSideRepository _peRepository;
-        private readonly IDocumentRepository _repository;
+        private string _loadmodule;
+        private readonly ILeftDocument _repository;
+        private readonly IDocumentRepository _rep;
         private readonly IEventAggregator _eventAggregator;
+        public static int count = 0;
+        
         private readonly IDictionary<Document, DocumentPresentationModel> _models = new Dictionary<Document, DocumentPresentationModel>();
-        public LeftViewPresenter(LeftView view, ILeftSideRepository peRepository, IDocumentRepository repository, IEventAggregator eventAggregator)
+        public LeftViewPresenter(LeftView view, IDocumentRepository rep, ILeftDocument repository, IEventAggregator eventAggregator)
         {
             View = view;
-            _peRepository = peRepository;
             _repository = repository;
+            _rep = rep;
             _eventAggregator = eventAggregator;
             View.Model = this;
             PopulateDocuments();
@@ -28,24 +31,27 @@ namespace MedicoPlus.Presenters
         private void OnSelect(Document obj)
         {
             SelectedDocument = _models[obj];
-            OnPropertyChanged(nameof(SelectedDocument));
+            OnPropertyChanged("SelectedDocument");
+            _loadmodule = SelectedDocument.ModuleName;
         }
         private void PopulateDocuments()
         {
-            var documents = _repository.GetData() as List<Document>;
-            documents?.ForEach(x =>
+            ((List<Document>)_rep.GetData()).ForEach(x =>
             {
-                var model = new DocumentPresentationModel(x);
-                _models.Add(x, model);
+                //var model = 
+                _models.Add(x, new DocumentPresentationModel(x));
             });
         }
-        public LeftView View { get; }
+        public LeftView View { get; set; }
         public DocumentPresentationModel SelectedDocument { get; set; }
-       public IList<LeftSideDocument> LeftDocuments => _peRepository.GetDocs();
-        //public LeftSideDocument SelectedItem
-        //{
-        //    set { _eventAggregator.GetEvent<SelectedLeftDocumentEvent>().Publish(value); }
-        //}
+
+        public IList<Document> LeftDocuments =>_repository.GetData(_loadmodule);
+       
+
+        public Document SelectedItem
+        {
+            set { _eventAggregator.GetEvent<SelectedDocumentEvent>().Publish(value); }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

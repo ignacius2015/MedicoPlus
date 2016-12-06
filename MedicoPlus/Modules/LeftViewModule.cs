@@ -23,7 +23,7 @@ namespace MedicoPlus.Modules
         }
         public void Initialize()
         {
-            _container.RegisterType(typeof(ILeftSideRepository), typeof(LeftSideDocumentRepository));
+            _container.RegisterType(typeof(ILeftDocument), typeof(LeftDocumentRepository));
             _manager.AddToRegion("LeftContent", _container.Resolve<LeftViewPresenter>().View);
         }
     }
