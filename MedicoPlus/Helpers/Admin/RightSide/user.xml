@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<documents>
+  <document>
+    <linkname>користувачі</linkname>
+    <modulename>list</modulename>
+    <hint>ведення списку користувачів системи</hint>
+  </document>
+  <document>
+    <linkname>групи користувачів</linkname>
+    <modulename>groups</modulename>
+    <hint>групи користувачів системи</hint>
+  </document>
+  <document>
+    <linkname>доступ до медичних даних</linkname>
+    <modulename>data</modulename>
+    <hint>налаштування доступу до деяких медчних даних</hint>
+  </document>
+  <document>
+    <linkname>зовнішні користувачі</linkname>
+    <modulename>external</modulename>
+    <hint>зовнішні користувачі, яким надано доступ до системи</hint>
+  </document>
+  <document>
+    <linkname>профілі груп доступу</linkname>
+    <modulename>profile</modulename>
+    <hint>профілі груп доступу</hint>
+  </document>
+  <document>
+    <linkname>настройки користувачів</linkname>
+    <modulename>settings</modulename>
+    <hint>управління призначеними для користувача настройками звітів, зовнішнього вигляду програми та іншими настройками</hint>
+  </document>
+  <document>
+    <linkname>очищення налаштувань</linkname>
+    <modulename>clear</modulename>
+    <hint>видалення налаштувань у вибраних користувачів</hint>
+  </document>
+</documents>

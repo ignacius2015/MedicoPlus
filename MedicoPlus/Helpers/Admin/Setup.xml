@@ -7,7 +7,7 @@
   </document>
   <document>
     <linkname>настройки користувачів і прав</linkname>
-    <modulename>users</modulename>
+    <modulename>user</modulename>
     <hint>адміністрування користувачів, настройка груп доступу, надання доступу зовнішнім користувачам, управління призначеними для користувача настройками</hint>
   </document>
   <document>
