@@ -43,7 +43,7 @@
   <document>
     <LinkName>листки непрацездатності</LinkName>
      <ImageName>/MedicoPlus;component/Images/PatientFile.png</ImageName>
-     <ModuleName>Admin\\sheets</ModuleName>
+     <ModuleName>Admin\sheets</ModuleName>
    </document>
   <document>
    <LinkName>автоматизована торгова точка</LinkName>

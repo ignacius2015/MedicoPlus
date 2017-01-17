@@ -15,7 +15,7 @@ namespace MedicoPlus.Modules
     {
         private readonly IUnityContainer _container;
         private readonly IRegionManager _manager;
-
+        
         public LeftViewModule(IUnityContainer container, IRegionManager manager)
         {
             _container = container;

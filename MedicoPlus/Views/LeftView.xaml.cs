@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MedicoPlus.Presenters;
 using MedicoPlus.Repos;
+using Prism.Regions;
 
 namespace MedicoPlus.Views
 {
@@ -25,11 +27,14 @@ namespace MedicoPlus.Views
         public LeftView()
         {
             InitializeComponent();
+            //RegionContext.GetObservableContext(this).PropertyChanged +=
+            //   (s, e) => LeftViewPresenter.SelectedDocument = RegionContext.GetObservableContext(this).Value as DocumentPresentationModel;
         }
         public LeftViewPresenter Model
         {
             get { return DataContext as LeftViewPresenter; }
             set { DataContext = value; }
         }
+        
     }
 }

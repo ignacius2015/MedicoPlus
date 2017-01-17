@@ -109,6 +109,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Helpers\Admin\RightSide\user.xaml.cs">
+      <DependentUpon>user.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\GridHelpers.cs" />
     <Compile Include="Helpers\SelectedDocumentEvent.cs" />
     <Compile Include="Models\areas.cs" />
@@ -159,6 +162,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="FolderBrowser\DialogSelectFolder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Helpers\Admin\RightSide\user.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

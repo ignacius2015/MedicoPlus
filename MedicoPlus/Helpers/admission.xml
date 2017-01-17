@@ -2,14 +2,14 @@
 <documents>
    <document Name="Головна сторінка">
     <ImageName>/MedicoPlus;component/Images/tablet_256.png</ImageName>
-    <ModuleName>Admission\\Desktop</ModuleName>
+    <ModuleName>Admission\Desktop</ModuleName>
    </document>
   <document Name="Приймальне відділення">
     <ImageName>/MedicoPlus;component/Images/lobby_256.png</ImageName>
-    <ModuleName>Admission\\Lobby</ModuleName>
+    <ModuleName>Admission\Lobby</ModuleName>
   </document>
  <document Name="органайзер">
      <ImageName>/MedicoPlus;component/Images/ChronologicalReview.png</ImageName>
-     <ModuleName>Admission\\organizer</ModuleName>
+     <ModuleName>Admission\organizer</ModuleName>
    </document>
 </documents>

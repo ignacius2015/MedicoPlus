@@ -203,17 +203,17 @@ namespace MedicoPlus.Models
                 .Property(e => e.password)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<users>()
-                .HasMany(e => e.online)
-                .WithRequired(e => e.users)
-                .HasForeignKey(e => e.user_id)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<users>()
+            //    .HasMany(e => e.online)
+            //    .WithRequired(e => e.users)
+            //    .HasForeignKey(e => e.user_id)
+            //    .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<users>()
-                .HasMany(e => e.personal)
-                .WithRequired(e => e.users)
-                .HasForeignKey(e => e.user_id)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<users>()
+            //    .HasMany(e => e.personal)
+            //    .WithRequired(e => e.users)
+            //    .HasForeignKey(e => e.user_id)
+            //    .WillCascadeOnDelete(false);
         }
     }
 }
